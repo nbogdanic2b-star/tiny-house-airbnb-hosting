@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiny House Airbnb Hosting</title>
+  <meta name="description" content="Pagina web para promocionar una tiny house disponible para estadias tipo Airbnb.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d2520;
+      --muted: #5f6f66;
+      --paper: #fbfaf5;
+      --leaf: #3f6f56;
+      --clay: #b96845;
+      --sky: #dce9e2;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.5;
+    }
+
+    header {
+      min-height: 88vh;
+      display: grid;
+      align-items: center;
+      padding: 32px clamp(20px, 6vw, 80px);
+      background:
+        linear-gradient(90deg, rgba(29, 37, 32, .82), rgba(29, 37, 32, .28)),
+        url("https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1800&q=80") center/cover;
+      color: var(--white);
+    }
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px clamp(20px, 6vw, 80px);
+      font-weight: 700;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, .45);
+      padding: 10px 16px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .hero {
+      max-width: 720px;
+      padding-top: 64px;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(44px, 8vw, 88px);
+      line-height: .95;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 560px;
+      margin: 0 0 28px;
+      font-size: clamp(18px, 2vw, 24px);
+      color: rgba(255, 255, 255, .9);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 6px;
+      background: var(--clay);
+      color: var(--white);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 56px clamp(20px, 6vw, 80px) 72px;
+    }
+
+    .section {
+      max-width: 1120px;
+      margin: 0 auto 48px;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .feature {
+      background: var(--white);
+      border: 1px solid #e7e1d8;
+      border-radius: 8px;
+      padding: 22px;
+      min-height: 160px;
+      box-shadow: 0 18px 45px rgba(45, 55, 48, .08);
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .feature p, .section p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .band {
+      background: var(--sky);
+      border-radius: 8px;
+      padding: clamp(24px, 5vw, 44px);
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .band ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 24px clamp(20px, 6vw, 80px);
+      background: var(--ink);
+      color: rgba(255, 255, 255, .78);
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      header { min-height: 82vh; }
+      nav { align-items: flex-start; gap: 16px; }
+      .grid, .band { grid-template-columns: 1fr; }
+      .hero { padding-top: 96px; }
+    }
+  </style>
+</head>
+<body>
+  <nav aria-label="Principal">
+    <span>Tiny House Airbnb Hosting</span>
+    <a href="#contacto">Reservar</a>
+  </nav>
+
+  <header>
+    <section class="hero">
+      <h1>Tiny House Airbnb Hosting</h1>
+      <p>Una experiencia simple, acogedora y lista para recibir huespedes que buscan descanso, naturaleza y comodidad.</p>
+      <a class="button" href="#contacto">Ver disponibilidad</a>
+    </section>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Estadia pensada para descansar</h2>
+      <p>Este espacio puede usarse como pagina principal para promocionar la tiny house, compartir fotos, destacar comodidades y dirigir a los visitantes al canal de reserva.</p>
+    </section>
+
+    <section class="section grid" aria-label="Caracteristicas">
+      <article class="feature">
+        <strong>Check-in facil</strong>
+        <p>Informacion clara para que cada llegada sea tranquila y sin complicaciones.</p>
+      </article>
+      <article class="feature">
+        <strong>Comodidad compacta</strong>
+        <p>Un refugio pequeno, bien organizado y preparado para estadias memorables.</p>
+      </article>
+      <article class="feature">
+        <strong>Listo para reservar</strong>
+        <p>Agrega aqui el enlace de Airbnb, WhatsApp o calendario de disponibilidad.</p>
+      </article>
+    </section>
+
+    <section class="section band" id="contacto">
+      <div>
+        <h2>Proxima reserva</h2>
+        <p>Actualiza esta seccion con fotos reales, tarifas, reglas de la casa y el enlace directo de reserva.</p>
+      </div>
+      <ul>
+        <li>Ideal para escapadas de fin de semana</li>
+        <li>Pagina responsive para celular y escritorio</li>
+        <li>Publicada con GitHub Pages</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Tiny House Airbnb Hosting
+  </footer>
+</body>
+</html>
